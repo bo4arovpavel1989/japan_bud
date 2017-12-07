@@ -1,0 +1,78 @@
+<div class='row'>
+<div class="col-md-6">
+<form id="changeProduct"  action="/admin/changeproduct" method="post" enctype="multipart/form-data" style="margin-left: 5%;">
+    <div class="form-group hidden">
+		<div class="input-group">
+			<input type="login" class="form-control" id="inputID" name='id' value='{{_id}}' required>
+		</div>
+	</div>
+   <div class="form-group">
+		<div class="input-group">
+			<label for="inputName">Название</label>
+			<input type="login" class="form-control" id="inputName" name='name' placeholder="Название" value='{{name}}' required>
+		</div>
+	</div>	
+	<div class="form-group">
+		<div class="input-group">
+		<label for="inputAddress">Адрес</label>
+			<input type="login" class="form-control" id="inputAddress" name='address' value='{{address}}' placeholder="Адрес(латиницей!)" required>
+		</div>
+	</div> 
+    <div class="form-group">
+		<div class="input-group">
+			<label for="inputPrice">Цена</label>
+			<input type="login" class="form-control" id="inputPrice" name='price' placeholder="Цена" value='{{price}}' required>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<label for="inputPrice">Старая цена</label>
+			<input type="login" class="form-control" id="inputFakeOldPrice" name='fakeOldPrice' placeholder="Старая цена" value='{{fakeOldPrice}}'>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<label for="inputQuantity">Количество</label>
+			<input type="login" class="form-control" id="inputQuantity" name='quantity' placeholder="Количество" value='{{quantity}}' required>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<label for="inputQuantity">Рейтинг</label>
+			<input type="login" class="form-control" id="inputRate" name='rank' placeholder="Рейтинг" value='{{rank}}' required>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<label for="inputCode">Код продукта</label>
+			<input type="login" class="form-control" id="inputCode" name='code' placeholder="Код товара" value='{{code}}' required>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<label for="inputCode">Ссылка ну ютуб</label>
+			<input type="login" class="form-control" id="inputVideoURL" name='videoURL' placeholder="Ссылка на ютуб" value='{{videoURL}}'>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="inputDescription">Описание</label>
+		<div class="input-group">
+			<textarea rows="5" cols="45" name="description" id='inputDescription' placeholder='Описание' >{{description}}</textarea>
+		</div>
+	</div>
+	<div class="form-group">
+			<label for="upoadImage">Изображение</label>
+			<input id='upoadImage' type="file" class="btn" name="upload" accept="image/jpeg"><br>
+	</div>
+    <div class="form-group">
+		<input id='changeProductButton' class="btn btn-primary" type="submit" value="Сохранить"></input>
+		<a href='#' class='btn btn-default cancelButton'>отмена</a>
+	</div>
+</form>
+</div>
+<div class="col-md-6">
+<div class='changeProductImage'>
+	<p><img src='{{image}}'></p>
+</div>
+</div>
+</div>

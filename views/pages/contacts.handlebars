@@ -1,0 +1,41 @@
+<p style='font-size: 21pt; margin-left: 20px;'>Контакты</p>
+<br>
+<div class='text'>
+<p>Юридический адрес:&emsp; Санкт-Петербург, 7-я линия, 28</p><br>
+<p>Телефон для связи: &emsp; <a href="tel:89500099337"><b class='active'>+7-950-00-99-33-7</a></b></p>
+<br>
+
+<p>Электронная почта: &emsp; <a href="mailto:zakaz-teddy@mail.ru"><b class='active'>zakaz-teddy@mail.ru</b></a></p>
+<br>
+<p>По всем вопросам сотрудничества или покупки оптом пишите на почту или звоните.
+<br>
+<p>Обратная связь:</p>
+<br>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<form id="feedbackForm" action="/feedback" method="post" style="margin-left: 3%;">
+    <div class="form-group callbackFormGroup">
+		<div class="input-group">
+			<input type="text" class="form-control" id="inputName" name='name' placeholder="Ваше имя" required>
+		</div>
+	</div>
+	 <div class="form-group callbackFormGroup">
+		<div class="input-group">
+			<input type="email" class="form-control" id="inputEmail" name='email' placeholder="Ваш E-Mail" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<textarea rows="5" cols="45" name="message" id='inputMessage' placeholder='Ваше сообщение'></textarea>
+		</div>
+	</div>
+	<div class="form-group">
+    <div>
+		<div class="g-recaptcha" data-sitekey="6LdMmh4UAAAAAHDdrekHILGU3evog0QlulVTNFyc"></div> <!--for teddy-server-->
+		<!--<div class="g-recaptcha" data-sitekey="6Lc38CcTAAAAAIf6W7-jn9LmnFLybRnSw7zEswzq"></div> <!-- for localhost-->
+  </div>
+  </div>
+    <div class="form-group">
+		<input class="btn btn-callback" type="submit" value="Отправить"></input>
+ </div>
+</form>
+</div>

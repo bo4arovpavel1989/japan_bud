@@ -1,0 +1,6 @@
+{{#each feedback}}
+<li>
+<p>{{name}} - {{email}}<a href='#' title='Удалить' class='deleteFeedback redLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-trash'/></a></p>
+<p>{{message}}</p>
+</li>
+{{/each}}

@@ -1,0 +1,21 @@
+<form id="changeSubCategory" class="form-inline" action="/admin/changesubcategory" method="post" enctype="multipart/form-data" style="margin-left: 5%;">
+   <div class="form-group" style='display: none;'>
+	<div class="input-group">
+      <input type="login" class="form-control" id="inputCategoryId" name='categoryId' readonly>
+	  </div>
+    </div>
+	<div class="form-group" style='display: none;'>
+	<div class="input-group">
+      <input type="login" class="form-control" id="inputSubCategoryId" name='subcategoryId' readonly>
+	  </div>
+    </div>
+   <div class="form-group">
+	<div class="input-group">
+      <input type="login" class="form-control" id="inputNewSubCategory" name='subcategory' placeholder="Категория" required>
+	  </div>
+    </div>
+    <div class="form-group">
+		<input class="btn" type="submit" value="Изменить"></input>
+		<a class="btn" onclick="$('#changeCategoryFormPlace').empty();">Закрыть</a>
+	</div>
+</form>

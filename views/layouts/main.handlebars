@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	{{#if title.name}}
+		{{#if title.subcatname}}
+			<title>{{title.name}} - {{title.subcatname}}</title>
+		{{else}}	
+		<title>{{title.name}}</title>
+		{{/if}}	
+	{{else}}
+		{{#unless product.name}}
+			<title>Zakaz-teddy. Интернет-магазин оригинальных брендовых мягких игрушек.</title>
+		{{else}}
+			<title>{{product.name}}</title>
+		{{/unless}}
+	{{/if}}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	{{#unless product.description}}
+		<meta name="description" content="Интернет-магазин оригинальных брендовых мишек Тедди (Teddy) Me To You фирмы Carte Blanche. Плюшевые мишки, мягкие игрушки, подарки">
+	{{else}}
+		<meta name="description" content="{{product.description}}">
+	{{/unless}}
+	<meta name="keywords" content="мишка Тедди Me To You, Teddy, Taddy, Tatty, МиТуЮ, Me To You, Carte Blanche, плюшевые мишки тедди, оригинальные мишки тедди, подарки, мягкие игрушки, сувениры купить спб">
+	<meta name="yandex-verification" content="f8f47fd8aeb5f1ed" />
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/main.css"/>
+	<link rel="shortcut icon" href="/favicon.png" type="image/png">
+	<script src="/api/jquery2.js"></script>
+	<script type="text/javascript" src="//glavpunkt.ru/js/punkts-widget/glavpunkt.js"> </script> 
+	<script src="/api/bootstrap.min.js"></script>
+	<script src='/scripts/app.js'></script>
+	<!-- Yandex.Metrika counter --> <script type="text/javascript"> 
+	(function (d, w, c) { (w[c] = w[c] || []).push(function() { try { 
+	w.yaCounter22648871 = new Ya.Metrika({ id:22648871, clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); } 
+	catch(e) { } }); 
+	var n = d.getElementsByTagName("script")[0], s = d.createElement("script"), f = function () {
+	n.parentNode.insertBefore(s, n); }; s.type = "text/javascript"; s.async = true; s.src = "https://mc.yandex.ru/metrika/watch.js"; 
+	if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } 
+	else { f(); } })(document, window, "yandex_metrika_callbacks"); </script> 
+	<noscript><div><img src="https://mc.yandex.ru/watch/22648871" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
+</head>
+<body>
+<div class="flag" id='adminBookmark' style='display: none;'></div>
+<div class='container'>
+	<div class='row'>
+		<div class='col-md-4 text-center hidden-sm hidden-xs'>
+			<div class='text-left' id='brand'>
+			<p><a href="/" style='color: black; text-decoration: none;'>Интернет-магазин</a></p>
+			<p><a href="/" style='color: black; text-decoration: none;'>оригинальных брендовых</a></p>
+			<p style='color: #d31558;'><a href="/" style='color: #d31558; text-decoration: none;'>мягких игрушек</a></p>
+			</div>	
+		</div>
+		<div class='col-md-4 text-center logo'>
+			<div id="header">
+				<div class="logo1">
+				<a href="/">
+					<img class='logoImage' alt='logo' src="/images/page/logo.png" width="174" height="120" />
+				</a>
+				</div>
+			</div>
+		</div>
+		<div class='col-md-4 callback'>
+			<div class='text-center orderCallbackBanner'>
+			<p style='font-size: 12pt;'>Есть вопросы? Звоните:</p>
+			<p id='phoneNumber'>8  950  00  99  33  7</p>
+			<p><button class='btn btn-callback orderCallback'>Заказать звонок</button></p>	
+			</div>
+		</div>
+	</div>
+<nav class="navbar navbar-default" role="navigation"> 
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+       </button>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="nav navbar-nav nav-tabs nav-justified">
+        <li><a href="/static/fedex" class="tab">Доставка и оплата</a></li>
+		<li><a href="/static/contacts" class="tab">Контакты</a></li>
+		<li><a href="/static/articles" class="tab">Статьи</a></li>
+		<li><a href="/static/about" class="tab">О компании</a></li>
+		<li><a href="/static/howorder" class="tab">Как заказать</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+</nav>
+<div class='row banners'>
+	<div class='col-md-4 hidden-sm hidden-xs'>
+		<p style='font-size: 16pt; margin-bottom: 25px;'>Гарантия качества<img class='circle' src="/images/page/quality.png" width="50" height="50"/></p>
+		<p>Только оригинальная</p>
+		<p>качественная продукция</p>
+		<p>Весь товар сертифицирован</p>
+		
+	</div>
+	<div class='col-md-4'>
+		<div>
+			{{#if specialProp.describe}}
+			<p style='font-size: 16pt; margin-bottom: 25px;'>Спец. предложение <img class='circle' src="/images/page/special.png" width="50" height="50" /></p>
+			<p>{{{specialProp.describe}}}</p>
+			<div class='text-center'>
+			<a href='{{specialProp.link}}' style='color: #d31558; text-decoration: underline;'>Купить</a>
+			</div>
+			{{/if}}
+		</div>
+	</div>
+	<div class='col-md-4 hidden-sm hidden-xs'>
+		<p style='font-size: 16pt; margin-bottom: 25px;'>Доставка <img class='circle' src="/images/page/fedex.png" width="50" height="50"/></p>
+		<p>Доставляем по Санкт-Петербургу, </p>
+		<p>Москве и всей России. </p>
+		<p>Множество пунктов самовывоза </p>
+		<p>почти во всех городах.</p>
+	</div>
+</div>
+<div class='row'>
+	<div class='col-md-4 col-sm-4 sidebar'>
+		<div id='searchArea'>
+		 <div class="input-group">
+			<input type="text" class="form-control searchProduct" placeholder="Поиск товара">
+			<span class="input-group-btn">
+			<button class="btn btn-default searchSubmit" type="button">Go!</button>
+			</span>
+		</div>
+		<select multiple class="form-control" id='searchResult'>
+		</select>
+		</div>
+		<div id='cart'>
+			<p>КОРЗИНА</p>
+			<p class='productQuantity'>В корзине нет товаров</p>
+		</div>
+		<div  class='showCategoriesField' style='margin-bottom: 20px;'><a href='#' style='color: black; margin-bottom: 40px;' class='showCategories'>Товары по категориям &ensp; <span  class="glyphicon glyphicon-menu-down"></a></div>
+		<div class='categoriesList'>
+			<ul class='nav nav-sidebar'>
+			{{#each category}}
+				 <li><a href="#" class='categoryChoose'><img src='{{image_micro_thumb}}'> &ensp; {{name}} <span style='float: right; top: 10px;' class="glyphicon glyphicon-menu-down"></span></a>
+					<ul class="dropdown-subcategory" style='display: none;'>
+						{{#each this.subcategory}}
+							<li><a href="/subcategory/{{../_id}}/{{id}}" class='subcategoryChoose'>{{name}}</a></li>
+						{{/each}}
+					</ul>                    
+				</li>
+			{{/each}}
+			</ul>
+		</div>
+    </div>
+	<div class='col-md-8 productsSpace'>
+		{{{body}}}
+    </div>
+</div>
+</div>
+</div>
+<link  href="/api/jquery.fancybox.min.css" rel="stylesheet">
+<script src="/api/jquery.fancybox.min.js"></script>
+</body>
+<footer class='footer' id='footer'>
+	<div class='text-center' >© 2011-2017 - Интернет-магазин мягких игрушек ведущих мировых брендов <b class='active'>Carte Blanche 
+	(Мишки Тедди серии Me To You, Blue Nose Frends), Hallmark Cards (серии Forever Friends), 
+	Boofle, Fizzy Moon, BEARINGTON COLLECTION </b> с доставкой по Москве, Санкт-Петербургу и остальным городам России. 
+</div>
+</footer>

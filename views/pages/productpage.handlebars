@@ -1,0 +1,113 @@
+<div class='productTitleLinks'>
+{{#unless notFound}}
+<a href='#' class='goBack' style='color: grey;'>вернуться назад |</a>
+<a href='/category/{{product.category.id}}' style='color: grey;'>{{product.category.name}} /</a>
+<a href='/subcategory/{{product.category.id}}/{{product.subcategory.id}}' style='color: grey;'>{{product.subcategory.name}}</a>
+</div>
+
+<div class='row'>
+{{#if product.gallery}}
+<div class="col-md-1 hidden-sm hidden-xs">
+{{#each product.gallery}}
+<a data-fancybox="gallery" href="{{image}}" style='width: 59px !important; height: 59px !important;'>
+	<img src='{{thumb_image}}' alt='Фото товара' class='galleryItem' style='width: 59px; height: 59px;'>
+</a>
+<a href='#' class='deleteImage redLink hidden' data-id='{{../product._id}}' data-image='{{image}}' data-image_thumb='{{thumb_image}}'>
+	<span class='glyphicon glyphicon-trash'/>
+</a>
+{{/each}}
+</div>
+{{/if}}
+<div class="col-md-5 text-center">
+<a data-fancybox="gallery" href="{{product.image}}">
+    <img src="{{product.image}}" alt='Фото товара' id='{{product.address}}' style='max-width: 300px; height: 300px;'>
+</a>
+</div>
+<div class="col-md-6">
+<h1 style='font-size: 20pt; margin-top: 0; margin-bottom: 50px; color: black; padding-left: 20px;'><b>{{product.name}}</b></h1>
+				{{#gt product.quantity 0}}
+					{{#unless product.isSpecialProp}}
+					<div style='margin-bottom: 50px; padding-left: 20px;'>
+						{{#gt product.fakeOldPrice 0}}<div class='discountOldPrice' style='font-size: 20pt;'>{{product.fakeOldPrice}},00 </div>{{/gt}}
+						<div style='color: grey; display: inline; font-size: 20pt;'>{{product.price}},00 руб.</div>
+					</div>
+					{{else}}
+					<div style='margin-bottom: 50px;'>
+						<div class='discountOldPrice' style='padding-left: 20px; font-size: 20pt;'>{{product.price}},00 </div> <div style='color: grey; display: inline; font-size: 20pt;'>{{product.discount}},00 руб.</div>	
+					</div>
+					{{/unless}}
+					<div class='toCartButton' style='margin-bottom: 50px; padding-left: 20px;'>
+						<button class='btn btn-toCartButton' style='width: 200px; !important; border-radius: 0 !important; ' data-id='{{product._id}}' data-target='{{product.address}}'>В корзину</button>
+					</div>
+				{{/gt}}
+				{{#lte product.quantity 0}}
+					<br>
+					<div class='noProduct text-center'>
+						<p>Нет в наличии</p>
+					</div>
+				{{/lte}}	
+</div>
+</div>
+<div class='row'>
+<p style='padding-left: 40px;'>код товара: {{product.code}}</p>
+{{#if product.videoURL}}
+{{#startsWith 'https://' product.videoURL}}
+<p style='padding: 20px 10px 20px 40px; width: 100%; overflow: hidden;'>
+<iframe width="300" height="176" src="{{product.videoURL}}" frameborder="0" allowfullscreen></iframe>
+</p>
+{{/startsWith}}
+{{/if}}
+<p style='padding: 20px 10px 20px 40px; text-indent: 1.05em;'>{{product.description}}</p>
+</div>
+<div style='padding: 20px 10px 20px 20px;'><a href='#' class='showReviewSection' data-product='{{product.address}}' style='color: black; font-size: 20pt;'> Отзывы &ensp;&ensp;<span class="glyphicon glyphicon-menu-down"></span></a></div>
+<div class='reviewSection' style='padding: 20px 10px 20px 40px;display: none;'>
+<a href='#' class='showReviewForm' onclick='$("#reviewForm").toggle(400); return false' style='color: grey;'>оставить отзыв</a>
+<script src='https://www.google.com/recaptcha/api.js'></script>
+<form id="reviewForm" action="/postreview" style='display: none;' method="post">
+	<div class="form-group">
+		<div class="input-group hidden">
+			<input type="text" class="form-control" id="inputName" name='address' value='{{product.address}}'required>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group hidden">
+			<input type="text" class="form-control" id="inputName" name='type' value='productReview'required>
+		</div>
+	</div>
+    <div class="form-group callbackFormGroup">
+		<div class="input-group ">
+			<input type="text" class="form-control" id="inputName" name='name' placeholder="Ваше имя" required>
+		</div>
+	</div>
+	 <div class="form-group callbackFormGroup">
+		<div class="input-group ">
+			<input type="email" class="form-control" id="inputEmail" name='email' placeholder="E-Mail/VK (не обязательно)">
+		</div>
+	</div>
+	<div class="form-group callbackFormGroup">
+		<div class="input-group ">
+			<textarea rows="3" cols="25" name="message" id='inputMessage' placeholder='Ваш отзыв'></textarea>
+		</div>
+	</div>
+	<div class="form-group">
+    <div>
+		<div class="g-recaptcha" data-sitekey="6LdMmh4UAAAAAHDdrekHILGU3evog0QlulVTNFyc"></div> <!--for teddy-server-->
+		<!--<div class="g-recaptcha" data-sitekey="6Lc38CcTAAAAAIf6W7-jn9LmnFLybRnSw7zEswzq"></div> <!-- for localhost-->
+  </div>
+  </div>
+    <div class="form-group">
+		<input class="btn btn-callback" type="submit" value="Отправить"></input>
+ </div>
+</form>
+<div style='border-bottom: 1px solid grey;'></div>
+<div class='reviewList'>
+</div>
+<a class='btn btn-default moreReviews' href='#'>Дальше</a>
+</div>
+{{else}}
+<div class='text-center'>
+	<p>К сожаленью, запрашиваемый товар не найден!</p>
+	<a href='/' class='active'>Вернуться в магазин</a>
+</div>
+{{/unless}}
+<script src='/scripts/productpage.js'></script>

@@ -1,0 +1,18 @@
+<h3 class='text-center'>КАТЕГОРИИ</h3>
+<form id="addCategory" class="form-inline" action="/admin/addcategory" method="post" style="margin-left: 5%;">
+   <div class="form-group">
+    <label for="inputCategory" class="control-label">Категория</label>
+	<div class="input-group">
+      <input type="login" class="form-control" id="inputCategory" name='category' placeholder="Категория" required>
+	  </div>
+    </div>
+    <div class="form-group">
+		<input class="btn btn-default" type="submit" value="Добавить"></input>
+	</div>
+</form>
+<div id='categories'>
+</div>
+<div id='changeCategoryFormPlace'>
+</div>
+<script src='/scripts/category.js'>
+

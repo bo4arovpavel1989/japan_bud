@@ -1,0 +1,69 @@
+<form id="addProduct"  action="/admin/addproduct" method="post" enctype="multipart/form-data" style="margin-left: 5%;">
+    <div class="form-group">
+		<div class="input-group">
+			<input type="login" class="form-control" id="inputName" name='name' placeholder="Название" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<select name='category' id='productAddCategory' class='form-control'>
+		<option class='productAddCategory' value='0'>Выберите категорию</option>
+		{{#each category}}
+		<option class='productAddCategory' value='{{_id}}'>{{name}}</option>
+		{{/each}}
+		</select>
+	</div>
+	<div class="form-group">
+		<select name='subcategory' id='productAddSubcategory' class='form-control'>
+		</select>
+	</div>	
+	<div class="form-group">
+		<div class="input-group">
+			<input type="login" class="form-control" id="inputAddress" name='address' placeholder="Адрес(латиницей!)" required>
+		</div>
+	</div>
+    <div class="form-group">
+		<div class="input-group">
+			<input type="login" class="form-control" id="inputPrice" name='price' placeholder="Цена" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<input type="login" class="form-control" id="inputFakeOldPrice" name='fakeOldPrice' placeholder="Старая цена">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<input type="login" class="form-control" id="inputQuantity" name='quantity' placeholder="Количество" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<label for="inputQuantity">Рейтинг</label>
+			<input type="login" class="form-control" id="inputRate" name='rank' placeholder="Рейтинг" value='999' required>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<input type="login" class="form-control" id="inputCode" name='code' placeholder="Код товара" required>
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<label for="inputCode">Ссылка ну ютуб</label>
+			<input type="login" class="form-control" id="inputVideoURL" name='videoURL' placeholder="Ссылка на ютуб">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="input-group">
+			<textarea rows="5" cols="45" name="description" id='inputDescription' placeholder='Описание'></textarea>
+		</div>
+	</div>
+	<div class="form-group">
+			<label>Изображение</label>
+			<input type="file" class="btn" name="upload" accept="image/jpeg"><br>
+	</div>
+    <div class="form-group">
+		<input id='addProductButton' class="btn btn-primary" type="submit" value="Добавить"></input>
+		<a href='#' class='btn btn-default' onclick='$("#showAddProductForm").trigger("click"); return false;'>отмена</a>
+ </div>
+</form>

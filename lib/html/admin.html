@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Teddy-bear admin</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="/css/1.css"/>
+	<link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+</head>
+<h1 style='text-align: center;'>Управление <a href='/'>магазином</a></h1>
+<a href='#' class='logOut'>Выход</a>
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+       </button>
+      <a class="navbar-brand" href="/admin"><strong>Главная</strong></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="nav navbar-nav">
+        <li><a href="#" class="tab" data-name='Каталог' onclick="return false">Каталог</a></li>
+		<li><a href="#" class="tab" data-name='Категории' onclick="return false">Категории</a></li>
+		<li><a href="#" class="tab" data-name='Заказы' onclick="return false">Заказы<span id='ordersQuantity' class='redLink'></span></a></li>
+		<li><a href="#" class="tab" data-name='Звонки' onclick="return false">Звонки<span id='callsQuantity' class='redLink'></a></li>
+		<li><a href="#" class="tab" data-name='Акции' onclick="return false">Акции</a></li>
+		<li><a href="#" class="tab" data-name='Обратная' onclick="return false">Обратная связь</a></li>
+		<li><a href="#" class="tab" data-name='Отзывы' onclick="return false">Отзывы</a></li>
+		<li><a href="#" class="tab" data-name='Редактировать' onclick="return false">Редактировать страницы</a></li>
+		<li><a href="#" class="tab" data-name='Настройки' onclick="return false">Настройки</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+<div class='container-fluid' id='tabsData'>
+</div>
+<script src="/api/jquery2.js"></script>
+<script src="/api/collapse.js"></script>
+<script src="/scripts/tabsApp.js"></script>

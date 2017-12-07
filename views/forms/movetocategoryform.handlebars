@@ -1,0 +1,14 @@
+<form class='form-inline moveProduct' action="/admin/moveproduct" method="post" enctype="multipart/form-data" style="margin-left: 5%; width: 100%;">
+    <div class="form-group hidden">
+			<input type="text" class="form-control" id="inputProduct" name='product' value='{{product}}'required>
+	</div>
+		<select name='category' class='form-control productMoveToCategory'>
+		<option class='productMove' value='0'>Выберите категорию</option>
+		{{#each category}}
+		<option class='productMove' value='{{_id}}'>{{name}}</option>
+		{{/each}}
+		</select>
+		<select name='subcategory' class='form-control productMoveToSubCategory' style='display: inline;'>
+		</select>
+		<input id='addProductButton' class="btn btn-primary" type="submit" value="Переместить"></input>
+</form>

@@ -1,0 +1,57 @@
+<tbody>
+{{#if title}}
+<tr>
+<td colspan="10" class='text-center'>{{title}}</td>
+</tr>
+{{/if}}
+{{#each products}}
+<tr>
+<td>
+	<img src={{image_micro_thumb}}>
+</td>
+<td class='productList' data-id='{{_id}}'><a href='/products/{{address}}'>{{name}}</a></td><td> - {{category.name}} - </td><td> - {{quantity}}шт. в наличии - </td>
+{{#if isHit}}
+	<td><a href='#' title='На главную' class='makeHit greenLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-certificate'/></a></td>
+{{else}}
+	<td><a href='#' title='На главную' class='makeHit commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-certificate'/></a></td>
+{{/if}}
+<td><a href='#' title='Количество' class='replenishment greenLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-plus-sign'/></a></td>
+<td><a href='#' title='Галерея' class='gallery greenLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-picture'/></a></td>
+<td><a href='#' title='Переместить' class='moveToCategory brownLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-share-alt'/></a></td>
+<td><a href='#' title='Изменить' class='changeProduct brownLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-pencil'/></a></td>
+<td><a href='#' title='Удалить' class='deleteProduct redLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-trash'/></a></td></tr>
+<tr class='hidden'>
+<td colspan="9">
+<div class='replenishmentFormPlace'>
+<form class='form-inline replenishmentForm' action="/admin/replenishproduct" method="post" enctype="multipart/form-data">
+	<input type="login" class="form-control hidden" id="inputID" name='id' value='{{_id}}' required>
+    <input class="form-control" type="number" value="{{quantity}}" name="quantity" size='3' required>
+	<input class="btn" type="submit" value="Изменить" style="opacity: 1 !important;"></input>
+</form>	
+</div>
+</td>
+</tr>
+<tr class='hidden'>
+<td colspan="9">
+<div class='galleryFormPlace'>
+<form class='form-inline galleryForm' action="/admin/addimagetogallery" method="post" enctype="multipart/form-data">
+<div class='form-group'>
+	<input type="login" class="form-control hidden" id="inputAddress" name='address' value='{{address}}' required>
+</div>
+<div class='form-group'>	
+<div class="input-group">
+	<input type="file" name="upload" multiple accept="image/*,image/jpeg" required>
+</div>	
+</div>	
+	<input class="btn" type="submit" value="Загрузить" style="opacity: 1 !important;"></input>
+</form>	
+</div>
+</td>
+</tr>
+<tr class='hidden'>
+<td colspan="9" class='changeCategoryForm'>
+
+</td>
+</tr>
+{{/each}}
+</tbody>

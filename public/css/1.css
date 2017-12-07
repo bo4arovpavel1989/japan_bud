@@ -1,0 +1,98 @@
+body {
+	
+}
+
+form {
+	margin-top: 30px;
+}
+.hidden {
+	display: none;
+}
+
+.commandLink, .commandLink:focus {
+	margin-left: 20px;
+	color: red;
+}
+.greenLink, .greenLink:focus {
+	color: green;
+}
+
+
+.redLink, .redLink:focus {
+	color: red;
+}
+
+.brownLink {
+	color: brown;
+}
+
+#categoriesList {
+	margin-top: 30px;
+	margin-left: 50px;
+}
+
+.round {
+	 border-radius: 100px;
+}
+
+#changeCategory {
+    display: block;
+    overflow: hidden;
+	width: 30%;
+	border-radius: 8px;
+}
+
+#changeSubCategory {
+    display: block;
+    overflow: hidden;
+	width: 30%;
+	border-radius: 8px;
+}
+
+#productsList {
+	margin-top: 30px;
+	margin-left: 50px;
+	z-index: 1;
+}
+
+#changeProduct {
+	width: 50%;
+}
+#changeProductImage {
+	display: inline;
+	float: right;
+	width: 30%;
+}
+
+.replenishmentFormPlace {
+	opacity: 1;
+}
+
+.replenishmentForm{
+	margin-top: 0;
+	opacity: 1 !important;
+	z-index: 999;
+}
+
+#callbackList {
+	margin-top: 30px;
+	margin-left: 50px;
+}
+.newCallback{
+	background-color: #E3E3E3;
+}
+
+
+#orderList{
+	margin-top: 30px;
+	margin-left: 50px;
+}
+.newOrder{
+	background-color: #E3E3E3;
+}
+.orderInfo {
+	border: 1px solid grey;
+}
+.totalPrice {
+ border-bottom: 3px solid black;	
+}

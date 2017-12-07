@@ -1,0 +1,6 @@
+{{#each product}}
+<option class='searchResultItem' value='/products/{{address}}' data-address='/products/{{address}}'>{{name}}</option>
+{{/each}}
+{{#unless product}}
+<option>Товар не найден</option>
+{{/unless}}

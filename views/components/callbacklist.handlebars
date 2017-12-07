@@ -1,0 +1,13 @@
+{{#each callback}}
+{{#if isItNew}}
+	<p class='newCallback'>{{name}} - {{phone}} - 
+	<a href='#' title='Отметить прочтенным' class='markSeen greenLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-ok'/></a>
+	<a href='#' title='Удалить' class='deleteCallback redLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-trash'/></a>
+	</p>
+{{else}}	
+	<p>{{name}} - {{phone}} - 
+	<a href='#' title='Отметить прочтенным' class='markSeen greenLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-ok'/></a>
+	<a href='#' title='Удалить' class='deleteCallback redLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-trash'/></a>
+	</p>
+{{/if}}
+{{/each}}

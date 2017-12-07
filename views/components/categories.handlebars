@@ -1,0 +1,34 @@
+<form id="addSubCategory" class="form-inline" action="/admin/addsubcategory" method="post" enctype="multipart/form-data" style="margin-left: 5%;">
+    <label for="inputSubCategory" class="control-label">Подкатегория</label>
+   <div class="form-group">
+		<select name='category' class='form-control'>
+		{{#each category}}
+		<option>{{name}}</option>
+		{{/each}}
+		</select>
+	</div>	
+   <div class="form-group">
+	<div class="input-group">
+      <input type="login" class="form-control" id="inputSubCategory" name='subcategory' placeholder="Подкатегория" required>
+	  </div>
+  </div>
+    <div class="form-group">
+		<input class="btn btn-default" type="submit" value="Добавить"></input>
+ </div>
+</form>
+<div id='changeCategoryFormPlace'>
+</div>
+{{#each category}}
+	<ul id='categoriesList'>
+		<li><img src='{{image_micro_thumb}}' class='round'> - {{name}} -({{rank}})
+		<a href='#' title='Изменить' data-id='{{_id}}' data-name='{{name}}' data-rank='{{rank}}' class='changeCategory brownLink commandLink'><span class='glyphicon glyphicon-pencil'/></a>
+		<a href='#' title='Удалить' data-id='{{_id}}' class='deleteCategory  redLink commandLink'><span class='glyphicon glyphicon-trash'/></a>
+		</li>
+		{{#each this.subcategory}}
+			<p> &ensp; |_  {{this.name}}
+			<a href='#' title='Изменить' data-parentid='{{../_id}}' data-id='{{this.id}}' data-name='{{this.name}}' class='changeSubCategory brownLink commandLink'><span class='glyphicon glyphicon-pencil'/></a>
+			<a href='#' title='Удалить' data-parentid='{{../_id}}' data-id='{{this.id}}' class='deleteSubCategory redLink commandLink'><span class='glyphicon glyphicon-trash'/></a>
+			</p>
+		{{/each}}
+	</ul>
+{{/each}}

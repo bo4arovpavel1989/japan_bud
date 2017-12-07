@@ -1,0 +1,417 @@
+@font-face {
+	font-family: TTDrugs-Thin;
+	src: local('Drugs.otf'), url(fonts/Drugs.otf), 
+	local('Drugs'), url('fonts/drugs.woff2') format('woff2'), 
+	url('fonts/drugs.woff') format('woff'), url('fonts/drugs.ttf') format('truetype');;
+	font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: Myriad-pro;
+	src: local('myriad-pro.otf'), url(fonts/myriad-pro.otf), url("fonts/myriad-pro.eot?#iefix")format("embedded-opentype"),
+    url("fonts/myriad-pro.woff") format("woff"),
+    url("fonts/myriad-pro.ttf") format("truetype");;
+	font-weight: normal;
+    font-style: normal;
+}
+
+body {
+	background-color: #f5f5f5;
+	font-family: TTDrugs-Thin;
+	font-weight: 900;
+	font-size: 13pt;
+	padding-top: 50px;
+	z-index: 1;
+	color: black;
+}
+
+.flag {
+  background-color: red;
+  width: 10px;
+  height: 20px;
+  position: relative;
+  cursor: pointer;
+  left: 20px;
+  top: -30px;
+}
+.flag::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid white;
+}
+.container {
+	padding: 0 !important;
+}
+
+p {
+	margin: 0 0 0 0;
+}
+
+.navbar {
+	margin-top: 30px;
+}
+.nav {
+}
+
+#brand  p{
+	font-size: 18pt;
+	margin: 0 0 0 0;
+}	
+
+.logo {
+	background-color:  #f5f5f5;
+	width: 300px;
+	height: 120px;
+	margin: auto;
+}
+
+#footer{
+	margin-top: 100px;
+	padding: 50px;
+	background-color: #C2C2C1;
+}
+
+.logo1 {
+	margin-bottom: 15px;
+}
+
+.logoImage {
+	background-color:  #f5f5f5;	
+	top: -15px;
+	position: relative;
+}
+
+#goToMain {
+	width: 174px;
+	height: 120px;
+}
+.callback  {
+	position: relative;
+	top: 10px;
+	margin: 0 0 0 0;
+	float: right;
+	padding-right: 10px;
+	padding-left: 16%;
+	white-space: nowrap;
+}
+.callback p {
+	padding-right: 0;
+}
+
+.btn-callback {
+	border-radius: 0;
+	background-color: #d31558;
+	color: white;
+	padding: 0.5% 10% 0.5% 10%;
+	font-size: 13pt;
+}
+
+#phoneNumber {
+	font-family: Myriad-pro;
+	font-weight: bolder;
+	font-size: 20pt;
+}
+
+.callbackFormGroup {
+	margin: 0;
+}
+
+.navbar-default {
+	background-color: #f5f5f5;
+	border: 2px solid;
+	border-color: #eec8d6;
+	opacity: 1 !important;
+	border-left: 0;
+	border-right: 0;
+	z-index: 100 !important;
+}
+
+.navbar {
+    border-radius: 0 2px;   
+}
+
+.nav-tabs>li>a {
+	border: 0;
+}
+
+.nav-tabs>li>a:hover {
+	color: #eec8d6 !important;
+}
+
+
+
+.navbar-collapse {
+	
+}
+.nav-tabs.nav-justified>li>a {
+	border: 0;
+}
+
+.container>.navbar-collapse, .container>.navbar-header {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.stickyMenu {
+	position: fixed;
+	margin: auto;
+	top: 0;
+	opacity: 0.95!important;
+	padding: 0 !important;
+}
+
+.rowBannersSticky {
+	margin-top: 140px !important;
+}
+
+.banners {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.circle{
+	float: right; 
+	top: -10px; 
+	left: -30px; 
+	position: relative;
+}
+
+.sidebar {
+	z-index: 1;
+}
+
+.searchProduct, .searchSubmit{
+	border-radius: 0;
+}
+
+
+#searchArea {
+	margin-bottom: 20px;
+}
+
+#searchResult {
+	display: none;
+	z-index: 999;
+	position: absolute;
+	width: 90%;
+	background: white;
+	overflow: auto;
+	border: 1px solid grey;
+}
+#searchResult.active{
+	display: block;
+}
+
+#cart{
+	margin-bottom: 20px;
+}
+#cartLink{
+	color: black;
+}
+
+.showCategories:focus, .showCategories:hover{
+	text-decoration:none;
+}
+
+.active {
+	color: #d31558 !important;
+	font-weight: bold;
+}
+
+.categoryChoose{
+	color: inherit !important;
+	padding-left: 0 !important;
+	border-bottom: 1px solid black;
+}
+
+
+.categoryChoose.active {
+	border-bottom: 1px solid #d31558;
+}
+
+.dropdown-subcategory {
+	list-style-type: none;
+}
+
+.subcategoryChoose{
+	color: inherit !important;
+}
+
+
+
+.productsSpace {
+	padding: 0;
+}
+
+.noProduct{
+	font-size: 14pt;
+	margin-bottom: 42px;
+}
+
+.productPlace {
+	max-height: 345px;
+	margin: 1px 0 2px 3px;
+	padding: 0 0 0 0;
+	overflow: hidden;
+	background-color: white;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	font-size: 10pt;
+	border-radius: 0 5px;   
+	border: 1px solid #f5f5f5;
+}
+
+
+@media screen and (max-width: 767px) {
+	.categoriesList{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	 .productPlace {
+		max-width: 256px;
+	}
+	.showCategoriesField{
+		display: none;
+	}
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+	 .productPlace {
+		max-width: 212px !important;	
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	 .productPlace {
+		max-width: 256px;
+	}
+}
+
+
+.productPlace:hover {
+    border: 1px solid #d31558;
+   }
+.productName {
+	padding: 0 10px 0 10px;
+	overflow: hidden;
+	background-color: white;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	color: black !important;
+}
+.productNameLink {
+	color: black !important;
+}
+.productPrice {
+	font-size: 13pt;
+}
+
+.discountOldPrice {
+	text-decoration: line-through; 
+	display: inline;
+	color: red;
+}
+
+.btn-toCartButton, .btn-toCartButton:focus {
+	color: white;
+	background-color: #d31558;
+	~background: linear-gradient(to bottom right, #62DA00, #32A900);
+	~background: -moz-linear-gradient(center top , #62DA00, #32A900) repeat scroll 0% 0% transparent;
+	width: 60%;
+	padding: 1px;
+	margin-top:  10px;
+	margin-bottom: 10px;
+	border-radius: 0;
+	~border-radius: 1px 1px 10px 10px;
+}
+
+.goToCart, .goToCart:focus {
+	color: white;
+	background-color: #d31558;
+	width: 60%;
+	padding: 1px;
+	margin-top:  10px;
+	margin-bottom: 10px;
+	border-radius: 0;
+}
+
+.commandLink {
+	margin-left: 20px;
+	color: red;
+}
+.greenLink {
+	color: green;
+}
+.redLink {
+	color: red;
+}
+
+.brownLink {
+	color: brown;
+}
+.productTitleLinks{
+	margin-left: 30px;
+	margin-bottom: 50px;
+	font-size: 15pt;
+}
+.galleryItem{
+	margin-bottom: 1px !important;
+	margin-left: 10px;
+}
+
+.deleteImage {
+	position: relative;
+	left: -20px;
+	top: -30px;
+	margin: 0;
+	z-index:999;
+}
+
+.productHowMany {
+	text-align: center;
+	margin-left: 20px;
+	border-radius: 5px;
+}
+
+.productInCartPrice {
+	white-space: nowrap;
+}
+.cartTable {
+	max-width: 600px;
+}
+
+.totalPriceLine{
+	border-top: 3px solid rgb(212, 212, 212);
+}
+
+.cart-section:hover {
+	cursor: pointer;
+}
+.cart-group, .delivery-group, .info-group {
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+.hidden {
+	display: none;
+}
+
+
+tr {
+	margin-top: 20px;
+}
+
+.text {
+	padding: 20px;
+}
+
+.text > p {
+	text-indent: 1.5em; 
+    text-align: justify; 
+}
