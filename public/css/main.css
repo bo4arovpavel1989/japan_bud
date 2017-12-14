@@ -17,13 +17,20 @@
 
 body {
 	background-color: #f5f5f5;
-	background-image: url(images/page/chruch.png);
+	background-image: url(images/page/bg.jpg);
 	font-family: TTDrugs-Thin;
 	font-weight: 900;
 	font-size: 13pt;
-	padding-top: 50px;
 	z-index: 1;
 	color: black;
+}
+
+.header {
+	background-image: url(images/page/topbg.jpg);
+    background-size: cover;
+	padding:0 300px 500px 300px;
+	margin:0 -300px -500px -300px;
+    background-repeat: no-repeat;
 }
 
 .flag {
@@ -75,7 +82,9 @@ p {
 #footer{
 	margin-top: 100px;
 	padding: 50px;
-	background-color: #C2C2C1;
+	background-image: url(images/page/footbg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .logo1 {
@@ -124,7 +133,7 @@ p {
 }
 
 .navbar-default {
-	background-color: #f5f5f5;
+	background-image: url(images/page/bg.jpg);
 	border: 2px solid;
 	border-color: #ff1a1a;
 	opacity: 1 !important;
@@ -194,6 +203,7 @@ p {
 
 #searchArea {
 	margin-bottom: 20px;
+	background-image: url(images/page/search.jpg);
 }
 
 #searchResult {
