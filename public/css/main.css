@@ -70,6 +70,7 @@ p {
 #brand  p{
 	font-size: 18pt;
 	margin: 0 0 0 0;
+	padding-left:30px;
 }	
 
 .logo {
@@ -291,6 +292,9 @@ p {
 	}
 	.showCategoriesField{
 		display: none;
+	}
+	#brand  p{
+		padding-left:35px;
 	}
 }
 
