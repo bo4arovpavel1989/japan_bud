@@ -107,7 +107,7 @@ p {
 
 .btn-callback {
 	border-radius: 0;
-	background-color: #d31558;
+	background-color: #ff1a1a;
 	color: white;
 	padding: 0.5% 10% 0.5% 10%;
 	font-size: 13pt;
@@ -126,11 +126,12 @@ p {
 .navbar-default {
 	background-color: #f5f5f5;
 	border: 2px solid;
-	border-color: #eec8d6;
+	border-color: #ff1a1a;
 	opacity: 1 !important;
 	border-left: 0;
 	border-right: 0;
 	z-index: 100 !important;
+    border-radius: 0 2px; 
 }
 
 .navbar {
@@ -142,7 +143,7 @@ p {
 }
 
 .nav-tabs>li>a:hover {
-	color: #eec8d6 !important;
+	color: #ff1a1a !important;
 }
 
 
@@ -220,7 +221,7 @@ p {
 }
 
 .active {
-	color: #d31558 !important;
+	color: #ff1a1a !important;
 	font-weight: bold;
 }
 
@@ -232,7 +233,7 @@ p {
 
 
 .categoryChoose.active {
-	border-bottom: 1px solid #d31558;
+	border-bottom: 1px solid #ff6666;
 }
 
 .dropdown-subcategory {
@@ -297,7 +298,7 @@ p {
 
 
 .productPlace:hover {
-    border: 1px solid #d31558;
+    border: 1px solid #ff1a1a;
    }
 .productName {
 	padding: 0 10px 0 10px;
@@ -322,7 +323,7 @@ p {
 
 .btn-toCartButton, .btn-toCartButton:focus {
 	color: white;
-	background-color: #d31558;
+	background-color: #ff1a1a;
 	~background: linear-gradient(to bottom right, #62DA00, #32A900);
 	~background: -moz-linear-gradient(center top , #62DA00, #32A900) repeat scroll 0% 0% transparent;
 	width: 60%;
@@ -335,7 +336,7 @@ p {
 
 .goToCart, .goToCart:focus {
 	color: white;
-	background-color: #d31558;
+	background-color: green;
 	width: 60%;
 	padding: 1px;
 	margin-top:  10px;
