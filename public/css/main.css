@@ -14,7 +14,12 @@
 	font-weight: normal;
     font-style: normal;
 }
-
+@font-face {
+	font-family: HanZi;
+	src: local('HanZi.ttf'), url('fonts/HanZi.ttf') format('truetype');
+	font-weight: normal;
+    font-style: normal;
+}
 body {
 	background-color: #f5f5f5;
 	background-image: url(images/page/bg.jpg);
@@ -68,9 +73,10 @@ p {
 }
 
 #brand  p{
-	font-size: 18pt;
+	font-size: 14pt;
+	font-family: HanZi,TTDrugs-Thin;
 	margin: 0 0 0 0;
-	padding-left:30px;
+	text-align:left;
 }	
 
 .logo {
@@ -135,7 +141,8 @@ p {
 
 .navbar-default {
 	background-image: url(images/page/bg.jpg);
-	border: 2px solid;
+	border: 2px;
+	border-style: solid;
 	border-color: #ff1a1a;
 	opacity: 1 !important;
 	border-left: 0;
@@ -145,7 +152,7 @@ p {
 }
 
 .navbar {
-    border-radius: 0 2px;   
+    border-radius: 4px 10px;   
 }
 
 .nav-tabs>li>a {
@@ -284,9 +291,12 @@ p {
 	.categoriesList{
 		display: none;
 	}
+	#brand  p{
+		padding-left:30px;
+	}
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 992px){
 	 .productPlace {
 		max-width: 256px;
 	}
@@ -294,7 +304,7 @@ p {
 		display: none;
 	}
 	#brand  p{
-		padding-left:35px;
+		padding-left:25px;
 	}
 }
 
@@ -302,11 +312,17 @@ p {
 	 .productPlace {
 		max-width: 212px !important;	
 	}
+	#brand  p{
+		padding-left:35px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 	 .productPlace {
 		max-width: 256px;
+	}
+	#brand  p{
+		padding-left:20px;
 	}
 }
 
