@@ -27,6 +27,8 @@
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="/css/main.css"/>
 	<link rel="shortcut icon" href="/favicon.png" type="image/png">
+	<link rel="stylesheet" type="text/css" href="/css/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="/css/slick-theme.css"/>
 	<script src="/api/jquery2.js"></script>
 	<script type="text/javascript" src="//glavpunkt.ru/js/punkts-widget/glavpunkt.js"> </script> 
 	<script src="/api/bootstrap.min.js"></script>
@@ -67,32 +69,7 @@
       </ul>
     </div><!-- /.navbar-collapse -->
 </nav>
-<div class='row banners'>
-	<div class='col-md-4 hidden-sm hidden-xs'>
-		<p style='font-size: 16pt; margin-bottom: 25px;'>Гарантия качества<img class='circle' src="/images/page/quality.png" width="50" height="50"/></p>
-		<p>Только оригинальная</p>
-		<p>качественная продукция</p>
-		<p>Весь товар сертифицирован</p>
-		
-	</div>
-	<div class='col-md-4'>
-		<div>
-			{{#if specialProp.describe}}
-			<p style='font-size: 16pt; margin-bottom: 25px;'>Спец. предложение <img class='circle' src="/images/page/special.png" width="50" height="50" /></p>
-			<p>{{{specialProp.describe}}}</p>
-			<div class='text-center'>
-			<a href='{{specialProp.link}}' style='color: #d31558; text-decoration: underline;'>Купить</a>
-			</div>
-			{{/if}}
-		</div>
-	</div>
-	<div class='col-md-4 hidden-sm hidden-xs'>
-		<p style='font-size: 16pt; margin-bottom: 25px;'>Доставка <img class='circle' src="/images/page/fedex.png" width="50" height="50"/></p>
-		<p>Доставляем по Санкт-Петербургу, </p>
-		<p>Москве и всей России. </p>
-		<p>Множество пунктов самовывоза </p>
-		<p>почти во всех городах.</p>
-	</div>
+<div class='row banners text-center'>
 </div>
 <div class='row'>
 	<div class='col-md-4 col-sm-4 sidebar'>
@@ -133,6 +110,7 @@
 </div>
 <link  href="/api/jquery.fancybox.min.css" rel="stylesheet">
 <script src="/api/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/api/slick.min.js"></script>
 </body>
 <footer class='footer' id='footer'>
 	<div class='text-center' >Интернет-магазин: <b class='active'>витамины, биодобавки, косметика из Японии</b>. Знаменитое японское качество: мы заботимся о Вашей красоте и здоровье.
