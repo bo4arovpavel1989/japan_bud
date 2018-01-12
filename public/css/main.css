@@ -190,8 +190,17 @@ p {
 }
 
 .banners {
+	margin:auto;
 	margin-top: 50px;
 	margin-bottom: 50px;
+	width:50%;
+}
+.carousel_image {
+	border-radius: 3px;
+    border: 1px solid white;
+}
+.carousel_image:hover {
+    border: 1px solid #ff1a1a;
 }
 .circle{
 	float: right; 
@@ -294,6 +303,9 @@ p {
 	#brand  p{
 		padding-left:30px;
 	}
+	.banners {
+		width:80%;
+	}
 }
 
 @media screen and (min-width: 768px) and (max-width: 992px){
@@ -306,6 +318,9 @@ p {
 	#brand  p{
 		padding-left:25px;
 	}
+	.banners {
+		width:80%;
+	}
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -315,6 +330,9 @@ p {
 	#brand  p{
 		padding-left:35px;
 	}
+	.banners {
+		width:70%;
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -323,6 +341,9 @@ p {
 	}
 	#brand  p{
 		padding-left:20px;
+	}
+	.banners {
+		width:50%;
 	}
 }
 
