@@ -1,7 +1,0 @@
-User-agent: *
-Disallow: /login
-Disallow: /admin
-Disallow: /cart
-
-Host: zakaz-teddy.ru
-Sitemap: http://zakaz-teddy.ru/sitemap.xml
