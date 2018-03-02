@@ -33,7 +33,7 @@ server.on('request', app);
 
 router(app);
 
-server.listen(8080);
+server.listen(80);
 
 console.log('Server runs');
 
