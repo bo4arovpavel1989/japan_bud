@@ -42,11 +42,11 @@
 <h3 class='cart-section'>Доставка</h3>
 <div class="form-group delivery-group" style='display: none;'>
 	<input type="radio" id="fedex" name="fedex" value='Курьер' onchange='showHideAddressField($(this));' checked>
-	<label for="fedex">Курьерская доставка по СПб и Москве(190р., при заказе от 2000р.БЕСПЛАТНО)</label><br>
+	<label for="fedex">Курьерская доставка</label><br>
 	<input type="radio" id="post" value='Почта' name="fedex" onchange='showHideAddressField($(this));'>
-	<label for="post">Отправка почтой России. Стоимость доставки 290рублей. Оплата наложенным платежом при получении.</label><br>
+	<label for="post">Отправка почтой России.Оплата наложенным платежом при получении.</label><br>
 	<input type="radio" id="pickup" value='Самовывоз' name="fedex" onchange='showHideAddressField($(this));'>
-	<label for="pickup">Самовывоз (Москва и СПБ бесплатно при заказе более 1500 руб.Менее 90 руб.) По регионам России самовывоз 290 рублей. Оплата в пунктах самовывоза производится при получении.</label><br>
+	<label for="pickup">Самовывоз</label><br>
 	<a href="#" onclick="glavpunkt.openMap(selectPunkt); return false;" id='selectPunkt'>Выбрать пункт выдачи на карте</a> 
 	<br>
 	<textarea name="" id="selectedPunkt" cols="50" rows="4" style="border: 1px solid #999;margin-top: 10px; display: none;" readonly>
