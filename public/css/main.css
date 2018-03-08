@@ -157,6 +157,7 @@ p {
 
 .nav-tabs>li>a {
 	border: 0;
+	color: #0053BD !important;
 }
 
 .nav-tabs>li>a:hover {
