@@ -152,7 +152,7 @@ p {
 }
 
 .navbar-default {
-	background-image: url(images/page/chruch.png);
+	background-color: #d4eaff;
 	border: 2px;
 	border-style: solid;
 	border-color: #ff1a1a;
@@ -170,7 +170,7 @@ p {
 
 .nav-tabs>li>a {
 	border: 0;
-	color: #0053BD !important;
+	color: 0F6606 !important;
 }
 
 .nav-tabs>li>a:hover {
