@@ -45,8 +45,8 @@ body {
 .header {
 	background-image: url(images/page/topbg.jpg);
     background-size: cover;
-	padding:0 400px 330px 400px;
-	margin:0 -400px -330px -400px;
+	padding:0 400px 310px 400px;
+	margin:0 -400px -310px -400px;
     background-repeat: no-repeat;
 	box-shadow: 1px -14px 16px 4px #d4eaff inset;
 }
