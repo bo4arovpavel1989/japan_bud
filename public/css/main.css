@@ -34,12 +34,12 @@
     font-style: normal;
 }
 body {
-	background-color: #d4eaff;
+	background-color: #fefffa;
 	font-family: TTDrugs-Thin;
 	font-weight: 900;
 	font-size: 13pt;
 	z-index: 1;
-	color: #555555;
+	color: #3f224e;
 }
 
 .header {
@@ -48,7 +48,7 @@ body {
 	padding:0 400px 310px 400px;
 	margin:0 -400px -310px -400px;
     background-repeat: no-repeat;
-	box-shadow: 1px -14px 16px 4px #d4eaff inset;
+	box-shadow: 1px -14px 16px 4px #fefffa inset;
 }
 
 .flag {
@@ -173,7 +173,7 @@ p {
 
 .nav-tabs>li>a {
 	border: 0;
-	color: 0F6606 !important;
+	color: #3f224e !important;
 }
 
 .nav-tabs>li>a:hover {
