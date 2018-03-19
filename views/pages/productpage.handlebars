@@ -24,7 +24,7 @@
 </a>
 </div>
 <div class="col-md-6">
-<h1 style='font-size: 20pt; margin-top: 0; margin-bottom: 50px; color: black; padding-left: 20px;'><b>{{product.name}}</b></h1>
+<h1 style='font-size: 20pt; margin-top: 0; margin-bottom: 50px; padding-left: 20px;'><b>{{product.name}}</b></h1>
 				{{#gt product.quantity 0}}
 					{{#unless product.isSpecialProp}}
 					<div style='margin-bottom: 50px; padding-left: 20px;'>
@@ -59,7 +59,7 @@
 {{/if}}
 <p style='padding: 20px 10px 20px 40px; text-indent: 1.05em;'>{{product.description}}</p>
 </div>
-<div style='padding: 20px 10px 20px 20px;'><a href='#' class='showReviewSection' data-product='{{product.address}}' style='color: black; font-size: 20pt;'> Отзывы &ensp;&ensp;<span class="glyphicon glyphicon-menu-down"></span></a></div>
+<div style='padding: 20px 10px 20px 20px;'><a href='#' class='showReviewSection' data-product='{{product.address}}' style='font-size: 20pt;'> Отзывы &ensp;&ensp;<span class="glyphicon glyphicon-menu-down"></span></a></div>
 <div class='reviewSection' style='padding: 20px 10px 20px 40px;display: none;'>
 <a href='#' class='showReviewForm' onclick='$("#reviewForm").toggle(400); return false' style='color: grey;'>оставить отзыв</a>
 <script src='https://www.google.com/recaptcha/api.js'></script>
