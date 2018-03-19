@@ -156,7 +156,7 @@ p {
 
 .navbar-default {
 	background-color: #d4eaff;
-	border: 2px;
+	border: 1px;
 	border-style: solid;
 	border-color: #ff1a1a;
 	opacity: 1 !important;
@@ -377,7 +377,7 @@ p {
 	color: black !important;
 }
 .productNameLink {
-	color: black !important;
+	color: #3f224e !important;
 }
 .productPrice {
 	font-size: 13pt;
