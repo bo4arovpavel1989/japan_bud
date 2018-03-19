@@ -29,7 +29,9 @@
 }
 @font-face {
 	font-family: Sarah;
-	src: local('Sarah Script Regular.ttf'), url('fonts/Sarah Script Regular.ttf') format('truetype');
+	src: local('Sarah Script Regular.ttf'), url('fonts/Sarah Script Regular.ttf') format('truetype'),
+	url('sarah_script_regular.woff2') format('woff2'),
+    url('sarah_script_regular.woff') format('woff');
 	font-weight: normal;
     font-style: normal;
 }
