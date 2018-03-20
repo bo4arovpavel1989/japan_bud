@@ -90,6 +90,7 @@ p {
 #brand  p{
 	font-size: 50pt;
 	font-family:  Sarah,TTDrugs-Thin;
+	-webkit-text-stroke: .4px #f92a08;
 	color: white; 
 	text-decoration: none;
 	font-weight:normal;
