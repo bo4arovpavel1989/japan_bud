@@ -38,6 +38,7 @@
 					{{/unless}}
 					<div class='toCartButton' style='margin-bottom: 50px; padding-left: 20px;'>
 						<button class='btn btn-toCartButton' style='width: 200px; !important; border-radius: 0 !important; ' data-id='{{product._id}}' data-target='{{product.address}}'>В корзину</button>
+						<button class='btn btn-primary' style='width: 200px; !important; border-radius: 0 !important; ' id="AddFavViaSheens">В избранное</button>
 					</div>
 				{{/gt}}
 				{{#lte product.quantity 0}}
@@ -111,3 +112,27 @@
 </div>
 {{/unless}}
 <script src='/scripts/productpage.js'></script>
+<script>
+    // Функция для добавления в закладки избранного | https://sheensay.ru?p=710
+    document.getElementById( 'AddFavViaSheens' ).onclick = function () {
+        var title = document.title,
+                url = document.location,
+                UA = navigator.userAgent.toLowerCase(),
+                isFF = UA.indexOf('firefox') != -1,
+                isMac = UA.indexOf('mac') != -1,
+                isWebkit = UA.indexOf('webkit') != -1,
+                isIE = UA.indexOf('.net') != -1;
+ 
+ 
+        if ((isIE || isFF) && window.external) { // IE, Firefox
+            window.external.AddFavorite(url, title);
+            return false;
+        }
+ 
+ 
+        if (isMac || isWebkit) { // Webkit (Chrome, Opera), Mac
+            document.getElementById('AddFavViaSheens').innerHTML = 'Нажмите "' + (isMac ? 'Command/Cmd' : 'Ctrl') + ' + D" для добавления страницы в закладки';
+            return false;
+        }
+    }
+</script>
