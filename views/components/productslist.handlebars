@@ -15,6 +15,11 @@
 {{else}}
 	<td><a href='#' title='На главную' class='makeHit commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-certificate'/></a></td>
 {{/if}}
+{{#if isNew}}
+	<td><a href='#' title='Новинка' class='makeNew greenLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-star'/></a></td>
+{{else}}
+	<td><a href='#' title='Новинка' class='makeNew commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-star'/></a></td>
+{{/if}}
 <td><a href='#' title='Количество' class='replenishment greenLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-plus-sign'/></a></td>
 <td><a href='#' title='Галерея' class='gallery greenLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-picture'/></a></td>
 <td><a href='#' title='Переместить' class='moveToCategory brownLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-share-alt'/></a></td>
