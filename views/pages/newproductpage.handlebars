@@ -1,0 +1,39 @@
+		<p style='font-size: 21pt; margin-left: 20px;'>
+		Новинки
+		</p>
+		{{#each product}}
+			<div class='col-md-4 col-sm-4 productPlace text-center'>
+				{{#if isNewProduct}}
+					<span class='newProduct'><img src='/css/images/page/new.png'></span>
+				{{/if}}
+				<div class="productImage">
+				<a href="/products/{{address}}">
+					<img src="{{image_thumb}}" alt='Фото товара' id={{address}} height="200" />
+				</a>
+				</div><br>
+				<div class='productName text-center'>
+					<a class='productNameLink' href='/products/{{address}}' title='{{name}}'>{{name}}</a>
+				</div><br>
+				{{#gt quantity 0}}
+					{{#unless isSpecialProp}}
+					<div class='productPrice text-center'>
+						{{#gt fakeOldPrice 0}}<div class='discountOldPrice'>{{fakeOldPrice}},00 </div>{{/gt}}
+						{{price}},00 руб.
+					</div><br>
+					{{else}}
+					<div class='productPrice text-center'>
+						<div class='discountOldPrice'>{{price}},00 </div> {{discount}},00 руб.	
+					</div><br>
+					{{/unless}}
+					<div class='toCartButton text-center'>
+						<button class='btn btn-toCartButton' data-id='{{_id}}' data-target='{{address}}'>В корзину</button>
+					</div>
+				{{/gt}}
+				{{#lte quantity 0}}
+					<br>
+					<div class='noProduct text-center'>
+						<p>Нет в наличии</p>
+					</div>
+				{{/lte}}
+			</div>
+		{{/each}}
