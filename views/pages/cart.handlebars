@@ -9,7 +9,7 @@
 	<td>
 		<img src={{image_micro_thumb}}>
 	</td>
-	<td class='productItem' data-id='{{_id}}' data-price=
+	<td class='productItem' data-id='{{_id}}' data-weight='{{weight}}' data-price=
 		{{#if isSpecialProp}}
 			'{{discount}}' 
 		{{else}}
@@ -19,6 +19,9 @@
 	</td>
 	<td>
 		<input type="number" size="3" name="howMany" class='productHowMany' onchange='recalculatePrice($(this));' min="1" value="{{howMany}}" style='width: 50px; margin-right: 20px;'>
+	</td>
+	<td class='productInCartWeight'> 
+		<div class='sumWeight' style='display: inline;'>{{sumWeight}}</div> г. 
 	</td>
 	<td class='productInCartPrice'> 
 		<div class='sumPrice' style='display: inline;'>{{sumPrice}}</div> руб. 
@@ -32,8 +35,10 @@
 	<tr class='totalPriceLine'>
 	<td></td>
 	<td><a href='#' id='clearCart'>Очистить корзину</a></td>
-	<td><b>Итого</b></td>
+	<td><b>Итого стоимость:</b></td>
 	<td id='totalPrice' colspan="2"></td>
+	<td><b>Итого вес:</b></td>
+	<td id='totalWeight' colspan="2"></td>
 	</tr>
 	</tbody>
 	</table>	
@@ -41,17 +46,10 @@
 </div>
 <h3 class='cart-section'>Доставка</h3>
 <div class="form-group delivery-group" style='display: none;'>
-	<input type="radio" id="fedex" name="fedex" value='Курьер' onchange='showHideAddressField($(this));' checked>
-	<label for="fedex">Курьерская доставка</label><br>
-	<input type="radio" id="post" value='Почта' name="fedex" onchange='showHideAddressField($(this));'>
-	<label for="post">Отправка почтой России</label><br>
-	<input type="radio" id="pickup" value='Самовывоз' name="fedex" onchange='showHideAddressField($(this));'>
-	<label for="pickup">Самовывоз</label><br>
-	<a href="#" onclick="glavpunkt.openMap(selectPunkt); return false;" id='selectPunkt'>Выбрать пункт выдачи на карте</a> 
-	<br>
-	<textarea name="" id="selectedPunkt" cols="50" rows="4" style="border: 1px solid #999;margin-top: 10px; display: none;" readonly>
-	</textarea>
-	<br>
+	<input type="radio" id="fedex" name="fedex" value='Почта' onchange='showHideAddressField($(this));' checked>
+	<label for="fedex">Отправка почтой</label><br>
+	<input type="radio" id="post" name="fedex" value='Почта_трек'  onchange='showHideAddressField($(this));'>
+	<label for="post">Отправка почтой с треком</label><br>
 	<a href='#' class='btn btn-default nextSection' onclick='openPrevSection($(this)); return false;'>Назад</a>
 	<a href='#' class='btn btn-info nextSection' onclick='openNextSection($(this)); return false;'>Далее</a>
  </div>

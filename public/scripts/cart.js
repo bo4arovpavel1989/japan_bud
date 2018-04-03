@@ -1,12 +1,13 @@
 $(document).ready(function(){
 	deleteProductFromCart();
 	calculateTotalPrice();
+	calculateTotalWeight();
 	cartSubmit();
 	var cartTitle = document.getElementById("cartTitle");
 	cartTitle.scrollIntoView(true);
 	switchCartSection();
 	clearCart();
-	 triggerSelectPunktLink();
+	triggerSelectPunktLink();
 });
 
 function openPrevSection(button){
@@ -26,11 +27,20 @@ function openNextSection(button){
 
 function recalculatePrice(priceField) {
 	var price = priceField.parent().prev().data('price');
+	var weight = priceField.parent().prev().data('weight');
+	
 	var newPrice = Number(price) * priceField.val();
 	newPrice = Math.floor(newPrice);
-	priceField.parent().next().children('.sumPrice').html(newPrice);
-	calculateTotalPrice()
+	priceField.parent().next().next().children('.sumPrice').html(newPrice);
+	
+	var newWeight = Number(weight) * priceField.val();
+	newWeight = Math.floor(newWeight);
+	priceField.parent().next().children('.sumWeight').html(newWeight);
+	
+	calculateTotalPrice();
+	calculateTotalWeight();
 }
+
 
 function deleteProductFromCart(){
 	$('.deleteProductFromCart').on('click', function(e){
@@ -50,6 +60,17 @@ function calculateTotalPrice(){
 	});
 	$('#totalPrice').html(totalPrice + ' руб.');
 };
+
+function calculateTotalWeight(){
+	var totalWeight = 0;
+	var weight;
+	$('.sumWeight').each(function(){
+		weight = $(this).html();
+		weight = parseInt(weight);
+		totalWeight += weight;
+	});
+	$('#totalWeight').html(totalWeight);
+}
 
 function selectPunkt(punktInfo) { 
   var address = '';
