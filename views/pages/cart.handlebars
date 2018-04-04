@@ -21,7 +21,7 @@
 		<input type="number" size="3" name="howMany" class='productHowMany' onchange='recalculatePrice($(this));' min="1" value="{{howMany}}" style='width: 50px; margin-right: 20px;'>
 	</td>
 	<td class='productInCartWeight'> 
-		<div class='sumWeight' style='display: inline;'>{{sumWeight}}</div> г. 
+		<div class='sumWeight' style='display: none;'>{{sumWeight}}</div>
 	</td>
 	<td class='productInCartPrice'> 
 		<div class='sumPrice' style='display: inline;'>{{sumPrice}}</div> руб. 
@@ -35,10 +35,10 @@
 	<tr class='totalPriceLine'>
 	<td></td>
 	<td><a href='#' id='clearCart'>Очистить корзину</a></td>
-	<td><b>Итого стоимость:</b></td>
+	<td><b>Итого:</b></td>
 	<td id='totalPrice' colspan="2"></td>
-	<td><b>Итого вес:</b></td>
-	<td id='totalWeight' colspan="2"></td>
+	<td><b style='display: none;'>Итого вес:</b></td>
+	<td id='totalWeight'style='display: none;' colspan="2"></td>
 	</tr>
 	</tbody>
 	</table>	
@@ -47,9 +47,9 @@
 <h3 class='cart-section'>Доставка</h3>
 <div class="form-group delivery-group" style='display: none;'>
 	<input type="radio" id="fedex" name="fedex" value='Почта' onchange='showHideAddressField($(this));' checked>
-	<label for="fedex">Отправка почтой</label><br>
+	<label for="fedex">Отправка почтой (<span id='postprice'></span> руб.)</label><br>
 	<input type="radio" id="post" name="fedex" value='Почта_трек'  onchange='showHideAddressField($(this));'>
-	<label for="post">Отправка почтой с треком</label><br>
+	<label for="post">Отправка почтой с треком (<span id='posttrackprice'></span> руб.)</label><br>
 	<a href='#' class='btn btn-default nextSection' onclick='openPrevSection($(this)); return false;'>Назад</a>
 	<a href='#' class='btn btn-info nextSection' onclick='openNextSection($(this)); return false;'>Далее</a>
  </div>

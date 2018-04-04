@@ -70,6 +70,32 @@ function calculateTotalWeight(){
 		totalWeight += weight;
 	});
 	$('#totalWeight').html(totalWeight);
+	var fedexPrice = calculateFedexPrice(totalWeight);
+	$('#postprice').html(fedexPrice[0]);
+	$('#posttrackprice').html(fedexPrice[1]);
+}
+
+function calculateFedexPrice(totalWeight){
+	if (totalWeight <= 100) return [130,360]
+	else if(totalWeight > 100 && totalWeight <= 200) return [180,420]
+	else if(totalWeight > 200 && totalWeight <= 300) return [230,480]
+	else if(totalWeight > 300 && totalWeight <= 400) return [290,540]
+	else if(totalWeight > 400 && totalWeight <= 500) return [350,600]
+	else if(totalWeight > 500 && totalWeight <= 600) return [410,660]
+	else if(totalWeight > 600 && totalWeight <= 700) return [470,720]
+	else if(totalWeight > 700 && totalWeight <= 800) return [530,780]
+	else if(totalWeight > 800 && totalWeight <= 900) return [590,840]
+	else if(totalWeight > 900 && totalWeight <= 1000) return [650,900]
+	else if(totalWeight > 1000 && totalWeight <= 1100) return [710,960]
+	else if(totalWeight > 1100 && totalWeight <= 1200) return [770,1020]
+	else if(totalWeight > 1200 && totalWeight <= 1300) return [830,1080]
+	else if(totalWeight > 1300 && totalWeight <= 1400) return [890,1140]
+	else if(totalWeight > 1400 && totalWeight <= 1500) return [950,1200]
+	else if(totalWeight > 1500 && totalWeight <= 1600) return [1010,1260]
+	else if(totalWeight > 1600 && totalWeight <= 1700) return [1070,1320]
+	else if(totalWeight > 1700 && totalWeight <= 1800) return [1130,1380]
+	else if(totalWeight > 1800 && totalWeight <= 1900) return [1190,1440]
+	else if(totalWeight > 1900) return [1250,1500];
 }
 
 function selectPunkt(punktInfo) { 
