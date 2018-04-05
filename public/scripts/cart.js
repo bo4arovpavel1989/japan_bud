@@ -73,6 +73,7 @@ function calculateTotalWeight(){
 	var fedexPrice = calculateFedexPrice(totalWeight);
 	$('#postprice').html(fedexPrice[0]);
 	$('#posttrackprice').html(fedexPrice[1]);
+	$('#fedexPrice').val(fedexPrice[0])
 }
 
 function calculateFedexPrice(totalWeight){
@@ -132,6 +133,7 @@ function cartSubmit() {
 		data.phone = $('#customerPhone').val();
 		data.address = $('#customerAddress').val();
 		data.comment = $('#customerComment').val();
+		data.fedexPrice = $('#fedexPrice').val();
 		$.ajax({
         type: "POST",
         url: "/makeorder",
@@ -157,18 +159,15 @@ function switchCartSection(){
 	});
 }	
 
-function showHideAddressField(id){
-	if(id.attr('id') === 'pickup') {
-		$('#customerAddress').addClass('hidden');
-		$('#customerAddress').next().addClass('hidden');
-		$('#customerAddress').next().next().addClass('hidden'); /*hiding br-tags*/
-		$('#customerAddress').required = false;
-	} else if (id.attr('id') !=='pickup')	{
-		$('#customerAddress').removeClass('hidden');
-		$('#customerAddress').next().removeClass('hidden');
-		$('#customerAddress').next().next().removeClass('hidden'); /*showing br-tags*/
-		$('#customerAddress').required = true;
-	}
+function setFedexPrice(id){
+	var price;
+	
+	if(id.attr('id') === 'post') 
+		price = Number($('#postprice').html());
+	else if (id.attr('id') ==='track')	
+		price = Number($('#posttrackprice').html());
+	
+	$('#fedexPrice').val(price)
 }
 
 function triggerSelectPunktLink(){

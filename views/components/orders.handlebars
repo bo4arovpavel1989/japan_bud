@@ -6,15 +6,10 @@
 {{/if}}	
 		<a href='#' class='showInfo'>#{{number}} - {{name}} - {{date}}</a> - 
 		<a href='#' title='Заметка' class='makeComment greenLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-pencil'/></a>
-		{{#if isItNew}}
-		{{#unless fedexPrice}}
 		<a href='#' title='Установить цену доставки' class='setFedexPrice greenLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-road'/></a>
-		{{else}}
 		<a href='#' title='В работу' class='markSeenOrder greenLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-ok'/></a>
-		{{/unless}}
-		{{/if}}
 		{{#if isActive}}
-		<a href='#' title='Заказ отработан' class='markDoneOrder brownLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-eject'/></a>
+			<a href='#' title='Заказ отработан' class='markDoneOrder brownLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-eject'/></a>
 		{{/if}}
 		{{#unless deletedOne}}
 		<a href='#' title='Удалить' class='deleteOrder redLink commandLink' data-id='{{_id}}'><span class='glyphicon glyphicon-trash'/></a>

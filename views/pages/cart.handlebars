@@ -46,15 +46,16 @@
 </div>
 <h3 class='cart-section'>Доставка</h3>
 <div class="form-group delivery-group" style='display: none;'>
-	<input type="radio" id="fedex" name="fedex" value='Почта' onchange='showHideAddressField($(this));' checked>
+	<input type="radio" id="post" name="fedex" value='Почта' onchange='setFedexPrice($(this))' checked>
 	<label for="fedex">Отправка почтой (<span id='postprice'></span> руб.)</label><br>
-	<input type="radio" id="post" name="fedex" value='Почта_трек'  onchange='showHideAddressField($(this));'>
-	<label for="post">Отправка почтой с треком (<span id='posttrackprice'></span> руб.)</label><br>
+	<input type="radio" id="track" name="fedex" value='Почта_трек'  onchange='setFedexPrice($(this))'>
+	<label for="fedex">Отправка почтой с треком (<span id='posttrackprice'></span> руб.)</label><br>
 	<a href='#' class='btn btn-default nextSection' onclick='openPrevSection($(this)); return false;'>Назад</a>
 	<a href='#' class='btn btn-info nextSection' onclick='openNextSection($(this)); return false;'>Далее</a>
  </div>
 <h3 class='cart-section'>Личные данные</h3>
  <div class="form-group info-group" style='display: none;'>
+	<input name="fedexPrice" id='fedexPrice' type="number" style='display:none'>
 	<input name="name" id='customerName' type="text" placeholder="Введите имя" required><br><br>
 	<input name="email" id='customerEmail' type="email" placeholder="Введите email" required><br><br>
 	<input name="phone" id='customerPhone' type="phone" placeholder="Введите телефон" required><br><br>
