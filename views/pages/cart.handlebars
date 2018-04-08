@@ -37,8 +37,8 @@
 	<td><a href='#' id='clearCart'>Очистить корзину</a></td>
 	<td><b>Итого:</b></td>
 	<td id='totalPrice' colspan="2"></td>
-	<td><b style='display: none;'>Итого вес:</b></td>
-	<td id='totalWeight'style='display: none;' colspan="2"></td>
+	<td><b>Вес в граммах:</b></td>
+	<td id='totalWeight'colspan="2"></td>
 	</tr>
 	</tbody>
 	</table>	
@@ -47,13 +47,13 @@
 <h3 class='cart-section'>Доставка</h3>
 <div class="form-group delivery-group" style='display: none;'>
 	<input type="radio" id="post" name="fedex" value='Почта' onchange='setFedexPrice($(this))' checked>
-	<label for="post">Отправка почтой (<span id='postprice'></span> руб.)</label><br>
+	<label for="post">Отправка почтой, не более 2кг/посылку (<span id='postprice'></span> руб.)</label><br>
 	
 	<input type="radio" id="track" name="fedex" value='Почта_трек'  onchange='setFedexPrice($(this))'>
-	<label for="track">Отправка почтой с треком (<span id='posttrackprice'></span> руб.)</label><br>
+	<label for="track">Отправка почтой с треком, не более 2кг/посылку (<span id='posttrackprice'></span> руб.)</label><br>
 	
 	<input type="radio" id="ems" name="fedex" value='EMS'  onchange='setFedexPrice($(this))'>
-	<label for="track">Отправка EMS (<span id='emsprice'></span> руб.)</label><br>
+	<label for="ems">Отправка EMS (<span id='emsprice'></span> руб.)</label><br>
 	
 	<a href='#' class='btn btn-default nextSection' onclick='openPrevSection($(this)); return false;'>Назад</a>
 	<a href='#' class='btn btn-info nextSection' onclick='openNextSection($(this)); return false;'>Далее</a>

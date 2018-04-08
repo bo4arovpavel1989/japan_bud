@@ -1,3 +1,5 @@
+var fedexType='post';
+
 $(document).ready(function(){
 	deleteProductFromCart();
 	calculateTotalPrice();
@@ -9,6 +11,7 @@ $(document).ready(function(){
 	clearCart();
 	triggerSelectPunktLink();
 });
+
 
 function openPrevSection(button){
 		button.parent().hide(400);
@@ -63,6 +66,9 @@ function calculateTotalPrice(){
 
 function calculateTotalWeight(){
 	var totalWeight = 0;
+	var leftPackage; //for weigth more than 2000
+	var fullPackage; //for weigth more than 2000
+	var sal1, sal2; //for weigth more than 2000
 	var weight;
 	$('.sumWeight').each(function(){
 		weight = $(this).html();
@@ -70,11 +76,32 @@ function calculateTotalWeight(){
 		totalWeight += weight;
 	});
 	$('#totalWeight').html(totalWeight);
-	var fedexPrice = calculateFedexPrice(totalWeight);
-	$('#postprice').html(fedexPrice[0]);
-	$('#posttrackprice').html(fedexPrice[1]);
-	$('#emsprice').html(fedexPrice[2])
-	$('#fedexPrice').val(fedexPrice[0])
+	if (totalWeight > 2000) {
+		fullPackage = Math.floor(totalWeight/2000);
+		leftPackage = totalWeight % 2000;
+		sal1 = 1250 * fullPackage + calculateFedexPrice(leftPackage)[0];
+		sal2 = 1500* fullPackage + calculateFedexPrice(leftPackage)[1];
+		$('#postprice').html(sal1);
+		$('#posttrackprice').html(sal2);
+		$('#emsprice').html(calculateFedexPrice(totalWeight)[2])
+		if(fedexType==='post')
+			$('#fedexPrice').val(sal1);
+		else if(fedexType==='track')
+			$('#fedexPrice').val(sal2);
+		else if(fedexType==='ems')
+			$('#fedexPrice').val(calculateFedexPrice(totalWeight)[2]);
+	} else {
+		var fedexPrice = calculateFedexPrice(totalWeight);
+		$('#postprice').html(fedexPrice[0]);
+		$('#posttrackprice').html(fedexPrice[1]);
+		$('#emsprice').html(fedexPrice[2])
+		if(fedexType==='post')
+			$('#fedexPrice').val(fedexPrice[0]);
+		else if(fedexType==='track')
+			$('#fedexPrice').val(fedexPrice[1]);
+		else if(fedexType==='ems')
+			$('#fedexPrice').val(fedexPrice[2]);
+	}
 }
 
 function calculateFedexPrice(totalWeight){
@@ -198,12 +225,18 @@ function switchCartSection(){
 function setFedexPrice(id){
 	var price;
 	
-	if(id.attr('id') === 'post') 
+	if(id.attr('id') === 'post') {
+		fedexType='post';
 		price = Number($('#postprice').html());
-	else if (id.attr('id') ==='track')	
+	}	
+	else if (id.attr('id') ==='track')	{
+		fedexType='track';
 		price = Number($('#posttrackprice').html());
-	else if (id.attr('id') ==='ems')	
+	}	
+	else if (id.attr('id') ==='ems')	{
+		fedexType='ems';
 		price = Number($('#emsprice').html());
+	}	
 	
 	$('#fedexPrice').val(price)
 }
