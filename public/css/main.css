@@ -157,6 +157,19 @@ p {
 	margin: 0;
 }
 
+.contactLink {
+	color: #8032a8; 
+	text-decoration: none; 
+	white-space: nowrap
+}
+
+.contactLink :hover, .contactLink :focus{
+	opacity:0.95;
+	color: #8032a8; 
+	text-decoration: none !important; 
+	white-space: nowrap
+}
+
 .navbar-default {
 	background-color: #d4eaff;
 	border: 1px;
