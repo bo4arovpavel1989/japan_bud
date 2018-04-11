@@ -202,10 +202,12 @@ function cartSubmit() {
 			url: "/makeorder",
 			data: data,
 			contentType: "application/x-www-form-urlencoded",
-			success: function(){
-				alert("Заказ принят в работу!");
-				deleteCookie('cart');
-				location.assign('/');
+			success: function(html){
+				//alert("Заказ принят в работу!");
+				//deleteCookie('cart');
+				//location.assign('/');
+				$('#cartForm').hide();
+				$('#payForm').html(html);
 			}
 		});
 	});
