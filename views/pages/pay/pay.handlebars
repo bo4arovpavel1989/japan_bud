@@ -1,2 +1,13 @@
-<p style='font-size: 21pt; margin-left: 20px;' >Оплата</p>
-<script language=JavaScript src='https://auth.robokassa.ru/Merchant/PaymentForm/FormMS.js? MerchantLogin={{login}}&OutSum={{sum}}&InvoiceID={{num}}&Description={{desc}}&SignatureValue={{sign}}'></script>
+<p style='font-size: 15pt; margin-left: 20px;' >Оплата</p>
+<img  class='col-md-6' src='/css/images/page/kassa.png' style="margin-left: 5%;">
+ <form class='col-md-3' action='https://auth.robokassa.ru/Merchant/Index.aspx' method="POST" style="display:inline; margin-left: 5%; margin-top:5%;">
+ <input type="hidden" name="MrchLogin" value={{login}}>
+ <input type="hidden" name="OutSum" value={{sum}}>
+ <input type="hidden" name="InvId" value={{num}}>
+ <input type="hidden" name="Desc" value={{desc}}>
+ <input type="hidden" name="SignatureValue" value={{sign}}>
+ <input type="hidden" name="Culture" value="ru">
+ <input type="hidden" name="Encoding" value="utf-8">
+ <input type="hidden" name="Email" value={{email}}>
+ <input class="btn btn-success btn-lg" type="submit" value='Оплатить'>
+</form>
