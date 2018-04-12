@@ -203,11 +203,20 @@ function cartSubmit() {
 			data: data,
 			contentType: "application/x-www-form-urlencoded",
 			success: function(html){
+				/* no robokassa */
+				
 				//alert("Заказ принят в работу!");
 				//deleteCookie('cart');
 				//location.assign('/');
+				
+				/* end no robokassa */
+				
+				/* robokassa attouched */
+				
 				$('#cartForm').hide();
 				$('#payForm').html(html);
+				
+				/* end robokassa */
 			}
 		});
 	});
