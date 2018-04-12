@@ -46,13 +46,13 @@
 </div>
 <h3 class='cart-section'>Доставка</h3>
 <div class="form-group delivery-group" style='display: none;'>
-	<input type="radio" id="post" name="fedex" value='Почта' onchange='setFedexPrice($(this))' checked>
+	<input type="radio" id="post" name="fedex" value='Почта' onchange='setFedexPrice($(this))' checked autocomplete="off">
 	<label for="post">Отправка почтой, не более 2кг/посылку (<span id='postprice'></span> руб.)</label><br>
 	
-	<input type="radio" id="track" name="fedex" value='Почта_трек'  onchange='setFedexPrice($(this))'>
+	<input type="radio" id="track" name="fedex" value='Почта_трек'  onchange='setFedexPrice($(this))' autocomplete="off">
 	<label for="track">Отправка почтой с треком, не более 2кг/посылку (<span id='posttrackprice'></span> руб.)</label><br>
 	
-	<input type="radio" id="ems" name="fedex" value='EMS'  onchange='setFedexPrice($(this))'>
+	<input type="radio" id="ems" name="fedex" value='EMS'  onchange='setFedexPrice($(this))' autocomplete="off">
 	<label for="ems">Отправка EMS (<span id='emsprice'></span> руб.)</label><br>
 	
 	<a href='#' class='btn btn-default nextSection' onclick='openPrevSection($(this)); return false;'>Назад</a>
