@@ -1,6 +1,7 @@
 var writeLog=require('./lib/customfunctions.js').writeLog;
 
-process.on('uncaughtException', function (err) {		
+process.on('uncaughtException', function (err) {
+		console.log(err)
 	 writeLog(err, function(){
 		 process.exit(1);
 	 });

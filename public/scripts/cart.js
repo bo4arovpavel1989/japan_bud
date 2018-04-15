@@ -202,19 +202,22 @@ function cartSubmit() {
 			url: "/makeorder",
 			data: data,
 			contentType: "application/x-www-form-urlencoded",
-			success: function(html){
+			success: function(num){
 				/* no robokassa */
 				
-				//alert("Заказ принят в работу!");
-				//deleteCookie('cart');
-				//location.assign('/');
+					//alert("Заказ принят в работу!");
+					//deleteCookie('cart');
+					//location.assign('/');
 				
 				/* end no robokassa */
 				
 				/* robokassa attouched */
-				
-				$('#cartForm').hide();
-				$('#payForm').html(html);
+					if(num)
+						location.assign('/pay/order/'+num);
+					else {
+						alert('Ошибка оформления заказа. Попробуйте снова.')
+						location.reload();
+					}	
 				
 				/* end robokassa */
 			}
