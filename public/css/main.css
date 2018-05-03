@@ -494,6 +494,9 @@ p {
 	display: none;
 }
 
+.articleHeader:hover{
+	cursor:pointer;
+}
 
 tr {
 	margin-top: 20px;
@@ -530,3 +533,4 @@ tr {
 .parallax__layer--back {
   transform: translateZ(-1px);
 }
+
