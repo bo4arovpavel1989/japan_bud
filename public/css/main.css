@@ -96,7 +96,18 @@ p {
 	font-weight:normal;
 	margin: 0 0 0 0;
 	text-align:left;
+	position:relative;
 }	
+
+.sendJapan {
+	font-size: 11pt;
+	top: 63px;
+	color: #8032a8;
+	position: absolute;
+	margin-left:40px;
+	font-style: italic;
+	-webkit-text-stroke: .4px #f92a08;
+}
 
 .logo {
 	background-color:  #f5f5f5;
@@ -155,6 +166,26 @@ p {
 
 .callbackFormGroup {
 	margin: 0;
+}
+
+.topBlock {
+	position: relative;
+}
+
+.niceTextInsta {
+	position:absolute;
+	font-size: 14pt;
+	left: -10px;
+	color: #8032a8;
+}
+
+.niceTextTel {
+	position:absolute;
+	font-size: 12pt;
+	right: -180px;
+	top: 15px;
+	color: #ff1a1a;
+	font-style:italic;
 }
 
 .contactLink {
@@ -360,6 +391,7 @@ p {
 	.banners {
 		width:80%;
 	}
+	
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -371,6 +403,12 @@ p {
 	}
 	.banners {
 		width:70%;
+	}
+	.niceTextInsta {
+		position:absolute;
+		font-size: 14pt;
+		left: -40px;
+		color: #8032a8;
 	}
 }
 
