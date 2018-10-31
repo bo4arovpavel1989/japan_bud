@@ -49,6 +49,7 @@ function deleteProductFromCart(){
 	$('.deleteProductFromCart').on('click', function(e){
 		$(this).parent().parent().remove();
 		calculateTotalPrice();
+		calculateTotalWeight();
 		e.preventDefault();
 	});
 }
