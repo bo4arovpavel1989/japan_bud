@@ -18,7 +18,7 @@
 		<a href='/products/{{address}}'>{{name}}</a>
 	</td>
 	<td>
-		<input type="number" size="3" name="howMany" class='productHowMany' onchange='recalculatePrice($(this));' min="1" value="{{howMany}}" style='width: 50px; margin-right: 20px;'>
+		<input type="number" size="3" name="howMany" autocomplete="off" class='productHowMany' onchange='recalculatePrice($(this));' min="1" value="{{howMany}}" style='width: 50px; margin-right: 20px;'>
 	</td>
 	<td class='productInCartWeight'> 
 		<div class='sumWeight' style='display: none;'>{{sumWeight}}</div>
