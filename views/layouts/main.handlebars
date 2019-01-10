@@ -46,15 +46,15 @@
 		<div class='topBlock col-md-offset-2 col-md-2 text-right hidden-sm hidden-xs' >
 			<br>
 			<span class='niceTextInsta text-center'>Мы &ensp; в <br> Инстаграме!</span>
-			<p><a href='https://www.instagram.com/satomi_japan_krd/'  class='contactLink'><img src='/css/images/page/instagram.png'></a></p>
+			<p><a href='https://www.instagram.com/satomi_japan_krd/'  class='contactLink'><img alt='instagram_logo' src='/css/images/page/instagram.png'></a></p>
 		</div>
 		<div class='topBlock col-md-2 text-left hidden-sm hidden-xs'>
 			<br>
-			<p><a href='https://api.whatsapp.com/send?phone=79124174818' class='contactLink' style='text-decoration:none;'><img src='/css/images/page/whatsapp.png'>&ensp;79124174818</a></p>
-			<p><a href="viber://chat?number=79189405695"  class='contactLink' style='text-decoration:none;'><img src='/css/images/page/viber.png'>&ensp;79189405695</a></p>
+			<p><a href='https://api.whatsapp.com/send?phone=79124174818' class='contactLink' style='text-decoration:none;'><img alt='whatsapp_logo' src='/css/images/page/whatsapp.png'>&ensp;79124174818</a></p>
+			<p><a href="viber://chat?number=79189405695"  class='contactLink' style='text-decoration:none;'><img alt='viber_logo' src='/css/images/page/viber.png'>&ensp;79189405695</a></p>
 		</div>
 	</div>
-<nav class="navbar navbar-default" role="navigation"> 
+<nav class="navbar navbar-default"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menu">
@@ -77,7 +77,7 @@
 </nav>
 <div class='row banners text-center'>
 	{{#each carousel}}
-		<div style='text-align:center;'><img class='carousel_image' src='/carousel/images/{{this}}' alt={{this}} style='margin:auto;'></div>
+		<div style='text-align:center;'><img class='carousel_image' src='/carousel/images/{{this}}' alt='{{this}}' style='margin:auto;'></div>
 	{{/each}}
 </div>
 <div class='row'>
@@ -96,13 +96,13 @@
 			<p>КОРЗИНА</p>
 			<p class='productQuantity'>В корзине нет товаров</p>
 		</div>
-		<div  class='showCategoriesField' style='margin-bottom: 20px;'><a href='#' style='color: #3f224e; margin-bottom: 40px;' class='showCategories'>Товары по категориям &ensp; <span  class="glyphicon glyphicon-menu-down"></a></div>
+		<div  class='showCategoriesField' style='margin-bottom: 20px;'><a href='#' style='color: #3f224e; margin-bottom: 40px;' class='showCategories'>Товары по категориям &ensp; <span  class="glyphicon glyphicon-menu-down"></span></a></div>
 		<div class='categoriesList'>
 			<ul class='nav nav-sidebar'>
-			 <li><a href="/" class='categoryNew'><img src='/css/images/page/hit-micro.png'> &ensp; Хиты <span style='float: right; top: 10px;' class="glyphicon glyphicon-menu-down"></span></a>
-			 <li><a href="/new-products" class='categoryNew'><img src='/css/images/page/new-micro.png'> &ensp; Новинки <span style='float: right; top: 10px;' class="glyphicon glyphicon-menu-down"></span></a>
+			 <li><a href="/" class='categoryNew'><img alt='hit_logo' src='/css/images/page/hit-micro.png'> &ensp; Хиты <span style='float: right; top: 10px;' class="glyphicon glyphicon-menu-down"></span></a>
+			 <li><a href="/new-products" class='categoryNew'><img alt='new_logo' src='/css/images/page/new-micro.png'> &ensp; Новинки <span style='float: right; top: 10px;' class="glyphicon glyphicon-menu-down"></span></a>
 			{{#each category}}
-				 <li><a href="#" class='categoryChoose'><img src='{{image_micro_thumb}}'> &ensp; {{name}} <span style='float: right; top: 10px;' class="glyphicon glyphicon-menu-down"></span></a>
+				 <li><a href="#" class='categoryChoose'><img alt='category_logo' src='{{image_micro_thumb}}'> &ensp; {{name}} <span style='float: right; top: 10px;' class="glyphicon glyphicon-menu-down"></span></a>
 					<ul class="dropdown-subcategory" style='display: none;'>
 						{{#each this.subcategory}}
 							<li><a href="/subcategory/{{../_id}}/{{id}}" class='subcategoryChoose'>{{name}}</a></li>
@@ -116,7 +116,6 @@
 	<div class='col-md-8 productsSpace'>
 		{{{body}}}
     </div>
-</div>
 </div>
 </div>
 <link  href="/api/jquery.fancybox.min.css" rel="stylesheet">
@@ -161,9 +160,9 @@
 		});
     });
   </script>
-</body>
 <footer class='footer' id='footer'>
 	<div class='text-center' >Интернет-магазин: <b class='active'>витамины, биодобавки, косметика из Японии</b>. Знаменитое японское качество: мы заботимся о Вашей красоте и здоровье.
 	<br>© 2011-2018 Все права защищены. 
 </div>
 </footer>
+</body>
