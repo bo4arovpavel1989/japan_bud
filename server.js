@@ -1,11 +1,9 @@
 var writeLog=require('./lib/customfunctions.js').writeLog;
 
 process.on('uncaughtException', function (err) {
-	 writeLog(err.message, function(){
-		 writeLog(err.stack, function(){
-			process.exit(1)
-		});
-	 });
+	 writeLog(err.stack, function(){
+		process.exit(1)
+	});
 });
 
 var secret = require('./credentials.js');
