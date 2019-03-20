@@ -35,6 +35,9 @@
 	font-weight: normal;
     font-style: normal;
 }
+a:focus {
+	outline:none;
+}
 body {
 	background-color: #fefffa;
 	font-family: TTDrugs-Thin;
